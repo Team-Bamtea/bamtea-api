@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: bamtea-api
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bamtea?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: Amgfaa289!@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+jwt:
+  secret: your-secret-key-change-this-in-production-to-something-secure-and-long
+  expiration: 86400000
